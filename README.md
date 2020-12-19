@@ -1,32 +1,35 @@
-# albuild-snap
+# amzn2-snapd
 
-A set of prebuilt snapd and snap tools for Amazon Linux 2.
+Tools to install snapd on Amazon Linux 2 for arm64 machines.
 
-## Install (Amazon WorkSpaces)
+## Install
 
 ### Instructions
 
 1. Download the snap-confine and snapd packages from [the Release page](https://github.com/albuild/snap/releases/tag/v0.1.0).
+    ```
+    wget ---
+    ```
 
-1. Install the package.
+2. Install the package.
 
     ```
     sudo yum -y install snap-confine-0.1.0-0.amzn2.aarch64.rpm snapd-0.1.0-0.amzn2.aarch64.rpm
     ```
 
-1. Enable the snapd.socket.
+3. Enable the snapd.socket.
 
     ```
     sudo systemctl enable --now snapd.socket
     ```
-
-1. Logout and login.
 
 ## Build (Amazon WorkSpaces)
 
 ### System Requirements
 
 * Docker
+sudo yum install docker
+sudo systemctl start docker
 
 ### Instructions
 
@@ -34,13 +37,10 @@ A set of prebuilt snapd and snap tools for Amazon Linux 2.
 
     ```
     git clone https://github.com/albuild/snap.git
-    ```
-
-1. Go to the repository.
-
-    ```
     cd snap
     ```
+
+... here on out should be one bash script...
 
 1. Build a new image.
 
@@ -59,5 +59,3 @@ A set of prebuilt snapd and snap tools for Amazon Linux 2.
     ```
     bin/rmi
     ```
-# amzn2-snapd
-Tools to install snapd on Amazon Linux 2 for arm64 machines.
