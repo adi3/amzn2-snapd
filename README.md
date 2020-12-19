@@ -59,3 +59,5 @@ A set of prebuilt snapd and snap tools for Amazon Linux 2.
     ```
     bin/rmi
     ```
+# amzn2-snapd
+Tools to install snapd on Amazon Linux 2 for arm64 machines.
