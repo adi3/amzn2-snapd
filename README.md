@@ -56,8 +56,13 @@ sudo systemctl start docker
 get latest version
 version=$(curl -s https://api.github.com/repos/snapcore/snapd/releases/latest | grep -oP '"tag_name": "\K(.*)(?=")')
 
-sudo docker build . --force-rm --build-arg version=$version -t amzn2-snapd:latest
+sudo docker build . --force-rm --build-arg version=$version -t amzn2-snapd:rpm
 
+```
+
+Fetch package
+```
+docker run --rm -v `pwd`:/rpm amzn2-snapd:rpm /bin/bash -l -c "cp -f /root/rpmbuild/RPMS/aarch64/*-$version-0.amzn2.aarch64.rpm /rpm"
 ```
 
 Cleanup
