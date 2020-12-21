@@ -32,12 +32,6 @@ Tools to install snapd on Amazon Linux 2 for arm64 machines.
 
 ## Build
 
-* Docker
-sudo yum install docker
-sudo systemctl start docker
-
-### Instructions
-
 1. Set up dependencies
     ```
     sudo yum -y install docker git
