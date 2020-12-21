@@ -38,9 +38,9 @@ sudo systemctl start docker
 
 ### Instructions
 
-1. Install Docker
+1. Set up dependencies
     ```
-    sudo yum -y install docker
+    sudo yum -y install docker git
     sudo systemctl start docker
     ```
 
