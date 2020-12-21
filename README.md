@@ -59,7 +59,7 @@ Tools to install snapd on Amazon Linux 2 for arm64 machines.
 
 5. Clean up
     ```
-    sudo docker rmi albuild-snap:$version
+    sudo docker rmi amzn2-snapd:rpm
     ```
     
 RPM packages will be copied to your current directory. Proceed with installation as explained above.
