@@ -60,6 +60,11 @@ sudo docker build . --force-rm --build-arg version=$version -t amzn2-snapd:lates
 
 ```
 
+Cleanup
+```
+docker rmi albuild-snap:$version
+```
+
 
 1. Build a new image.
 
