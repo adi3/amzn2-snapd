@@ -29,6 +29,7 @@ RUN yum -y install \
 #WORKDIR /app
 RUN git clone https://github.com/snapcore/snapd.git
 
+# Patch borrowed from https://github.com/albuild/snap/blob/master/diff.patch
 #WORKDIR /app/snapd
 #RUN git checkout -b build $snap_version
 #ADD diff.patch .
