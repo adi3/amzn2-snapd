@@ -19,8 +19,7 @@ RUN yum -y install \
   libtool \
   libudev-devel \
   make \
-#  patch \
-#  pkgconfig \
+  patch \
   python-docutils \
   rpm-build \
   valgrind \
