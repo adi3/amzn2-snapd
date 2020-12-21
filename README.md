@@ -1,6 +1,6 @@
-# amzn2-snapd
+# Snapd for Amazon Linux 2
 
-Tools to build and install snapd on Amazon Linux 2 for arm64 machines.
+Tools to build and install snapd on Amazon Linux 2 for **arm64** machines.
 
 ## Install
 
