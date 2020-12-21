@@ -67,3 +67,4 @@ sudo systemctl start docker
     ```
     docker rmi albuild-snap:$version
     ```
+RPM packages will be copied to your current directory. Proceed to install the packages as explained above.
