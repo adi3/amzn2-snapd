@@ -7,13 +7,13 @@ Tools to install snapd on Amazon Linux 2 for arm64 machines.
 1. Download the packages
     ```
     wget https://github.com/adi3/amzn2-snapd/releases/download/v0.1.0/snap-confine-2.48.2-0.amzn2.aarch64.rpm
-    wget https://github.com/adi3/amzn2-snapd/releases/download/v0.1.0/
+    wget https://github.com/adi3/amzn2-snapd/releases/download/v0.1.0/snapd-2.48.2-0.amzn2.aarch64.rpm
     ```
 
 2. Install the package
 
     ```
-    sudo yum install -y snap-confine-2.48.2-0.amzn2.aarch64.rpm 
+    sudo yum install -y snap-confine-2.48.2-0.amzn2.aarch64.rpm snapd-2.48.2-0.amzn2.aarch64.rpm
     ```
 
 3. Enable the snapd.socket
