@@ -10,7 +10,7 @@ RUN yum -y install autoconf automake gettext git glib2-devel glibc-static \
 RUN git clone https://github.com/snapcore/snapd.git
 
 WORKDIR /snapd
-RUN git checkout -b build $snap_version
+RUN git checkout -b build $version
 
 # Patch borrowed from @albuild
 ADD diff.patch .
