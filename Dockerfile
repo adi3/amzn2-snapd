@@ -12,7 +12,7 @@ RUN git clone https://github.com/snapcore/snapd.git
 WORKDIR /snapd
 RUN git checkout -b build $snap_version
 
-# Patch borrowed from https://github.com/albuild/snap/blob/master/diff.patch
+# Patch borrowed from @albuild
 ADD diff.patch .
 RUN patch -p1 < diff.patch
 
