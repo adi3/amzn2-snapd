@@ -1,7 +1,7 @@
 #FROM amazonlinux:2.0.20181114
 FROM amazonlinux:latest
 
-#ARG version
+ARG version
 #ARG snap_version
 
 RUN version=$(curl -s https://api.github.com/repos/snapcore/snapd/releases/latest | grep -oP '"tag_name": "\K(.*)(?=")')
