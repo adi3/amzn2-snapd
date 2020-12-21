@@ -51,40 +51,19 @@ sudo systemctl start docker
     cd amzn2-snapd
     ```
 
-... here on out should be one bash script...
-```
-get latest version
-version=$(curl -s https://api.github.com/repos/snapcore/snapd/releases/latest | grep -oP '"tag_name": "\K(.*)(?=")')
-
-sudo docker build . --force-rm --build-arg version=$version -t amzn2-snapd:rpm
-
-```
-
-Fetch package
-```
-docker run --rm -v `pwd`:/rpm amzn2-snapd:rpm /bin/bash -l -c "cp -f /root/rpmbuild/RPMS/aarch64/*-$version-0.amzn2.aarch64.rpm /rpm"
-```
-
-Cleanup
-```
-docker rmi albuild-snap:$version
-```
-
-
-1. Build a new image.
+3. Build RPM packages
 
     ```
-    bin/build
+    version=$(curl -s https://api.github.com/repos/snapcore/snapd/releases/latest | grep -oP '"tag_name": "\K(.*)(?=")')
+    sudo docker build . --force-rm --build-arg version=$version -t amzn2-snapd:rpm
     ```
 
-1. Extract built packages from the built image. The packages will be copied to the ./rpm directory.
-
+4. Fetch packages
     ```
-    bin/cp
+    docker run --rm -v `pwd`:/rpm amzn2-snapd:rpm /bin/bash -l -c "cp -f /root/rpmbuild/RPMS/aarch64/*-$version-0.amzn2.aarch64.rpm /rpm"
     ```
 
-1. Delete the built image.
-
+5. Clean up
     ```
-    bin/rmi
+    docker rmi albuild-snap:$version
     ```
