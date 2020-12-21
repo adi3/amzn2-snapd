@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-version=`cat version`
-snap_version=`cat snap-version`
-exec yum install rpm/snap-confine-$snap_version-0.amzn2.aarch64.rpm rpm/snapd-$snap_version-0.amzn2.aarch64.rpm
