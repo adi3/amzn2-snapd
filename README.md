@@ -40,7 +40,7 @@ sudo systemctl start docker
 
 1. Install Docker
     ```
-    sudo yum install docker
+    sudo yum -y install docker
     sudo systemctl start docker
     ```
 
