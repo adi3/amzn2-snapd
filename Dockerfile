@@ -1,4 +1,5 @@
-FROM amazonlinux:2.0.20181114
+#FROM amazonlinux:2.0.20181114
+FROM amazonlinux:latest
 
 #ARG version
 #ARG snap_version
