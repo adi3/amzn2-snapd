@@ -54,6 +54,9 @@ sudo systemctl start docker
 ... here on out should be one bash script...
 ```
 sudo docker build . --force-rm --build-arg version=latest --build-arg snap_version=2.48.2 -t amzn2-snapd:latest
+
+get latest release
+version=curl -s https://api.github.com/repos/snapcore/snapd/releases/latest | grep -oP '"tag_name": "\K(.*)(?=")'
 ```
 
 
